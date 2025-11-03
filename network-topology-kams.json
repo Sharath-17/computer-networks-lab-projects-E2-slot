@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "node-1",
+      "label": "Node 1",
+      "position": {
+        "x": 264.62208800036734,
+        "y": 333.38647050050014
+      }
+    },
+    {
+      "id": "node-2",
+      "label": "Node 2",
+      "position": {
+        "x": 522.5835754659306,
+        "y": 334.02246573294923
+      }
+    },
+    {
+      "id": "node-3",
+      "label": "Node 3",
+      "position": {
+        "x": 540.028114089479,
+        "y": 560.379651890462
+      }
+    },
+    {
+      "id": "node-4",
+      "label": "Node 4",
+      "position": {
+        "x": 266.2318332294894,
+        "y": 560.8615596596172
+      }
+    },
+    {
+      "id": "node-5",
+      "label": "Node 5",
+      "position": {
+        "x": 393.30557721639457,
+        "y": 432.4651690446688
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "edge-1762189251094",
+      "source": "node-1",
+      "target": "node-5"
+    },
+    {
+      "id": "edge-1762189255474",
+      "source": "node-2",
+      "target": "node-5"
+    },
+    {
+      "id": "edge-1762189260341",
+      "source": "node-5",
+      "target": "node-4"
+    },
+    {
+      "id": "edge-1762189262764",
+      "source": "node-5",
+      "target": "node-3"
+    }
+  ],
+  "flows": [
+    {
+      "id": "flow-1762189319824",
+      "source": "node-5",
+      "destination": "node-1",
+      "bandwidth": 10,
+      "duration": 60
+    },
+    {
+      "id": "flow-1762189366195",
+      "source": "node-5",
+      "destination": "node-2",
+      "bandwidth": 12,
+      "duration": 300
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "core-switch-1",
+      "label": "Core Switch 1",
+      "position": {
+        "x": 300,
+        "y": 100
+      }
+    },
+    {
+      "id": "core-switch-2",
+      "label": "Core Switch 2",
+      "position": {
+        "x": 500,
+        "y": 100
+      }
+    },
+    {
+      "id": "aggregation-1",
+      "label": "Aggregation Switch 1",
+      "position": {
+        "x": 200,
+        "y": 250
+      }
+    },
+    {
+      "id": "aggregation-2",
+      "label": "Aggregation Switch 2",
+      "position": {
+        "x": 400,
+        "y": 250
+      }
+    },
+    {
+      "id": "aggregation-3",
+      "label": "Aggregation Switch 3",
+      "position": {
+        "x": 600,
+        "y": 250
+      }
+    },
+    {
+      "id": "server-rack-1",
+      "label": "Server Rack 1",
+      "position": {
+        "x": 150,
+        "y": 400
+      }
+    },
+    {
+      "id": "server-rack-2",
+      "label": "Server Rack 2",
+      "position": {
+        "x": 350,
+        "y": 400
+      }
+    },
+    {
+      "id": "server-rack-3",
+      "label": "Server Rack 3",
+      "position": {
+        "x": 550,
+        "y": 400
+      }
+    },
+    {
+      "id": "storage-array",
+      "label": "Storage Array",
+      "position": {
+        "x": 350,
+        "y": 500
+      }
+    },
+    {
+      "id": "gateway",
+      "label": "Gateway Router",
+      "position": {
+        "x": 400,
+        "y": 50
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "link-1",
+      "source": "gateway",
+      "target": "core-switch-1"
+    },
+    {
+      "id": "link-2",
+      "source": "gateway",
+      "target": "core-switch-2"
+    },
+    {
+      "id": "link-3",
+      "source": "core-switch-1",
+      "target": "core-switch-2"
+    },
+    {
+      "id": "link-4",
+      "source": "core-switch-1",
+      "target": "aggregation-1"
+    },
+    {
+      "id": "link-5",
+      "source": "core-switch-1",
+      "target": "aggregation-2"
+    },
+    {
+      "id": "link-6",
+      "source": "core-switch-2",
+      "target": "aggregation-2"
+    },
+    {
+      "id": "link-7",
+      "source": "core-switch-2",
+      "target": "aggregation-3"
+    },
+    {
+      "id": "link-8",
+      "source": "aggregation-1",
+      "target": "server-rack-1"
+    },
+    {
+      "id": "link-9",
+      "source": "aggregation-2",
+      "target": "server-rack-2"
+    },
+    {
+      "id": "link-10",
+      "source": "aggregation-3",
+      "target": "server-rack-3"
+    },
+    {
+      "id": "link-11",
+      "source": "aggregation-2",
+      "target": "storage-array"
+    },
+    {
+      "id": "link-12",
+      "source": "server-rack-2",
+      "target": "storage-array"
+    }
+  ],
+  "flows": [
+    {
+      "id": "flow-1",
+      "source": "server-rack-1",
+      "destination": "storage-array",
+      "bandwidth": 1000,
+      "duration": 300
+    },
+    {
+      "id": "flow-2",
+      "source": "server-rack-2",
+      "destination": "server-rack-3",
+      "bandwidth": 500,
+      "duration": 120
+    },
+    {
+      "id": "flow-3",
+      "source": "gateway",
+      "destination": "server-rack-2",
+      "bandwidth": 200,
+      "duration": 180
+    },
+    {
+      "id": "flow-4",
+      "source": "server-rack-3",
+      "destination": "storage-array",
+      "bandwidth": 800,
+      "duration": 240
+    }
+  ]
+}
