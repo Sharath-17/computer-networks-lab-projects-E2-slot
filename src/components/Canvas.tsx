@@ -188,7 +188,7 @@ export default function Canvas() {
         <Background />
         <Controls />
         <MiniMap
-          nodeColor={(node) => {
+          nodeColor={() => {
             return 'hsl(var(--primary))';
           }}
           maskColor="hsl(var(--background) / 0.8)"
