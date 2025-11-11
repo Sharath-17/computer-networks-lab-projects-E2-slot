@@ -28,8 +28,6 @@ export default function Canvas() {
     links: storeLinks,
     addNode: addStoreNode,
     addLink: addStoreLink,
-    deleteNode: deleteStoreNode,
-    deleteLink: deleteStoreLink,
     updateNode: updateStoreNode,
   } = useNetworkStore();
 
@@ -148,7 +146,7 @@ export default function Canvas() {
         if (!linkSource) {
           setLinkSource(node.id);
         } else if (linkSource !== node.id) {
-          onConnect({ source: linkSource, target: node.id });
+          onConnect({ source: linkSource, target: node.id, sourceHandle: null, targetHandle: null });
           setLinkSource(null);
           setMode('select');
         }

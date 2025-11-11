@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function SidebarLeft() {
-  const { nodes, flows, addFlow, deleteFlow, updateFlow } = useNetworkStore();
+  const { nodes, flows, addFlow, deleteFlow } = useNetworkStore();
   const [showAddDialog, setShowAddDialog] = useState(false);
   const [newFlow, setNewFlow] = useState<Partial<TrafficFlow>>({
     source: '',

@@ -9,7 +9,7 @@ import Canvas from '@/components/Canvas';
 let socket: Socket | null = null;
 
 function App() {
-  const { addMetric, setSimulating, isSimulating } = useNetworkStore();
+  const { addMetric, setSimulating } = useNetworkStore();
 
   useEffect(() => {
     // Initialize Socket.io connection
